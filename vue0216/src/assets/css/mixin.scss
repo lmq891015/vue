@@ -1,0 +1,130 @@
+/**
+ * @description Description
+ *
+ * @author Candy <candy.yan@motionglobal.com>
+ * @date  Creation Date 10/05/2018
+ */
+
+ $mainColor: #ec1c4e;
+ $backgroundColor: #495060;
+ $contentWrapperColor: #fff;
+ $fontColor: #495060;
+ 
+ // 背景图片地址和大小
+ @mixin bis($url) {
+   background-image: url($url);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+ }
+ @mixin borderRadius($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   -ms-border-radius: $radius;
+   -o-border-radius: $radius;
+   border-radius: $radius;
+ }
+ //宽高
+ @mixin wh($width, $height:auto) {
+   width: $width;
+   height: $height;
+ }
+ //定位全屏
+ @mixin allcover {
+   position: absolute;
+   top: 0;
+   right: 0;
+ }
+ //定位上下左右居中
+ @mixin center {
+   position: absolute;
+   left: 50%;
+   top:50%;
+   transform: translate(-50%, -50%);
+ }
+ //定位垂直居中
+ @mixin vertical-center {
+   position: absolute;
+   top:50%;
+   transform: translateY( -50%);
+ }
+ //定位水平居中
+ @mixin horizontal-center {
+   position: absolute;
+   left:50%;
+   transform: translateX( -50%);
+ }
+ //flex布局和子元素对齐方式
+ @mixin fj($type: space-between) {
+   display: flex;
+   align-items: center;
+   justify-content: $type;
+ }
+
+// 背景图片地址和大小
+@mixin bis($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+//定位全屏
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+//transform上下左右居中
+@mixin ctt {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//定位上下左右居中
+@mixin ctp($width, $height) {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-top: -$height/2;
+    margin-left: -$width/2;
+}
+
+//定位上下居中
+@mixin tb {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位左右居中
+@mixin lr {  
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+
+//字体大小、行高、字体
+@mixin ft($size, $line-height) {  
+	font-size: $size;
+	line-height:$line-height;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between){
+	display: flex;
+	justify-content: $type;
+
+}
